@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Hosting;
+using MicroBlog.Web.Common;
 
 namespace MicroBlog
 {
@@ -54,7 +55,7 @@ namespace MicroBlog
                 options.ViewLocationFormats.Add($"{{1}}/Views/{{0}}{RazorViewEngine.ViewExtension}");
                 options.AreaViewLocationFormats.Add($"{{1}}/Views/{{0}}{RazorViewEngine.ViewExtension}");
             });
-
+            services.AddScoped<IModuleScriptContext, ModuleScriptContext>();
             services.AddTransient<IMongoRepository, MongoRepository>();
         }
 

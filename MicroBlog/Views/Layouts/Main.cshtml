@@ -1,8 +1,10 @@
 ﻿@inject MicroBlog.Web.Common.IModuleScriptContext ModuleScriptContext;
-@inject Adriva.Web.Core.Optimization OptimizationContext;
-
+@using Adriva.Web.Core.Optimization;
+@using Microsoft.Extensions.DependencyInjection;
 @{
-    OptimizationContext.AddStylesheet("~/css/bootstrap.min.css", "~/css/site.css");
+     var httpContext = this.Html.ViewContext.HttpContext;
+        IOptimizationContext optimizationContext = httpContext.RequestServices.GetService<IOptimizationContext>();
+    optimizationContext.AddStylesheet("~/css/bootstrap.min.css", "~/css/site.css");
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MicroBlog - @("Ana Sayfa")</title>    
-    @OptimizationContext.RenderStyesheet()
+    @optimizationContext.RenderStyesheet()
 </head>
 
 <body>     
@@ -28,7 +30,7 @@
     };
     </script>
     @{
-        OptimizationContext.AddScript("~/extscripts/jquery.min.js", 
+        optimizationContext.AddScript("~/extscripts/jquery.min.js", 
                         "~/extscripts/bootstrap.bundle.min.js", 
                         "~/extscripts/jquery.validate.min.js",
                         "~/extscripts/jquery.validate.unobtrusive.min.js",
@@ -38,7 +40,7 @@
                         "~/extscripts/sweetalert.min.js",
                         "~/extscripts/inputmask.js");
     }        
-    @OptimizationContext.RenderScript( new {async="async"} )   
+    @optimizationContext.RenderScript( new {async="async"} )   
     @this.ModuleScriptContext.Render()    
 </body>
 </html>
