@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.Hosting;
 
 namespace MicroBlog
 {
@@ -57,7 +58,7 @@ namespace MicroBlog
             services.AddTransient<IMongoRepository, MongoRepository>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
