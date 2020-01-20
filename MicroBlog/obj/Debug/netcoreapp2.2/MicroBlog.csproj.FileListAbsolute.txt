@@ -1,0 +1,17 @@
+C:\Users\odikmen\source\repos\MicroBlog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.csprojAssemblyReference.cache
+C:\Users\odikmen\source\repos\MicroBlog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.AssemblyInfoInputs.cache
+C:\Users\odikmen\source\repos\MicroBlog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.AssemblyInfo.cs
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.deps.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.runtimeconfig.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.runtimeconfig.dev.json
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.dll
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.Mongo.dll
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.Mongo.pdb
+C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.RazorTargetAssemblyInfo.cache
+C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.csproj.CopyComplete
+C:\Users\odikmen\source\repos\microblog\MicroBlog\bin\Debug\netcoreapp2.2\MicroBlog.pdb
+C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.dll
+C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp2.2\MicroBlog.pdb

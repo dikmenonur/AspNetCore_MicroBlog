@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch via npm",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run-script", "debug"],
+            "port": 9229
+          },
+          {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch test",
+            
+            "program": "${workspaceFolder}/index.js"
+          },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome",
+            "url": "http://127.0.0.1:8000/",
+            "webRoot": "${workspaceRoot}/html/index.html",
+            "breakOnLoad": true
+          },
+      {
+        "name": "Debug CRA Tests",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/index.js",
+        "args": [
+          "test",
+          "--runInBand",
+          "--no-cache"
+        ],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+  }

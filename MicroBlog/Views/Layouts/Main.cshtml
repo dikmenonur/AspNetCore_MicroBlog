@@ -1,0 +1,44 @@
+﻿@inject MicroBlog.Web.Common.IModuleScriptContext ModuleScriptContext;
+@inject Adriva.Web.Core.Optimization OptimizationContext;
+
+@{
+    OptimizationContext.AddStylesheet("~/css/bootstrap.min.css", "~/css/site.css");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MicroBlog - @("Ana Sayfa")</title>    
+    @OptimizationContext.RenderStyesheet()
+</head>
+
+<body>     
+    @RenderBody()
+    <div id="busyOverlay">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <script src="~/scripts/appsettings.js"></script>
+    <script type="text/javascript">
+    petrolOfisi.portal.appSettings = {
+        shortDateFormat: '@DateTime.Now.ToShortDateString()'
+    };
+    </script>
+    @{
+        OptimizationContext.AddScript("~/extscripts/jquery.min.js", 
+                        "~/extscripts/bootstrap.bundle.min.js", 
+                        "~/extscripts/jquery.validate.min.js",
+                        "~/extscripts/jquery.validate.unobtrusive.min.js",
+                        "~/extscripts/jquery.unobtrusive-ajax.js",
+                        "~/extscripts/initializer.js",                        
+                        "~/extscripts/moment.min.js",
+                        "~/extscripts/sweetalert.min.js",
+                        "~/extscripts/inputmask.js");
+    }        
+    @OptimizationContext.RenderScript( new {async="async"} )   
+    @this.ModuleScriptContext.Render()    
+</body>
+</html>

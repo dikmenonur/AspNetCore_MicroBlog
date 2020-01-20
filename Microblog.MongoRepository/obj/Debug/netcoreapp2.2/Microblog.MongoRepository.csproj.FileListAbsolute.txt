@@ -1,0 +1,7 @@
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp2.2\Microblog.MongoRepository.deps.json
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp2.2\Microblog.MongoRepository.dll
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp2.2\Microblog.MongoRepository.pdb
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp2.2\Microblog.MongoRepository.AssemblyInfoInputs.cache
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp2.2\Microblog.MongoRepository.AssemblyInfo.cs
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp2.2\Microblog.MongoRepository.dll
+C:\Users\odikmen\source\repos\MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp2.2\Microblog.MongoRepository.pdb
