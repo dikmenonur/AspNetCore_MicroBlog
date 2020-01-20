@@ -59,3 +59,13 @@ C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp3.1\MicroB
 C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.pdb
 C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.TagHelpers.input.cache
 C:\Users\odikmen\source\repos\microblog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.TagHelpers.output.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.csprojAssemblyReference.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.AssemblyInfoInputs.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.AssemblyInfo.cs
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.TagHelpers.input.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.TagHelpers.output.cache
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.dll
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.pdb
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.RazorCoreGenerate.cache

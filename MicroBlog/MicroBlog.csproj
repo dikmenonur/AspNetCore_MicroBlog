@@ -7,6 +7,13 @@
     <OutputType>Exe</OutputType>
     <StartupObject />
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="C\**" />
+    <Content Remove="C\**" />
+    <EmbeddedResource Remove="C\**" />
+    <None Remove="C\**" />
+    <TypeScriptCompile Remove="C\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Adriva.Web.Core" Version="2.1.20.1" />
@@ -27,7 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="C\" />
     <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
