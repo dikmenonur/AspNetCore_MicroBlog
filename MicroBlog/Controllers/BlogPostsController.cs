@@ -36,7 +36,7 @@ namespace Blog.Controllers
                 return BadRequest(ModelState);
             }
 
-            var blogPost = this.MongoRepository.GetDatasAsync(title);
+            var blogPost = await this.MongoRepository.GetDatasAsync(title);
 
             if (blogPost == null)
             {
