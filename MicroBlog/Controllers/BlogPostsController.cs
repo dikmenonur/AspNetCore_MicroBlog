@@ -1,10 +1,8 @@
-﻿using System;
-using System.Linq;
-using MicroBlog.Mongo.Data;
+﻿using MicroBlog.Mongo.Data;
+using MicroBlog.Mongo.Model;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using MicroBlog.Mongo.Model;
 
 namespace Blog.Controllers
 {

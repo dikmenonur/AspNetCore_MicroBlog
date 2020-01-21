@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {}
+    "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {}
   },
   "projects": {
-    "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
+    "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "projectUniqueName": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
         "projectName": "MicroBlog.Mongo",
-        "projectPath": "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
         "packagesPath": "C:\\Users\\Onur Dikmen\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
+        "outputPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {
+    "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
+        "projectUniqueName": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
         "projectName": "MicroBlog",
-        "projectPath": "D:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
+        "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
         "packagesPath": "C:\\Users\\Onur Dikmen\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\obj\\",
+        "outputPath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -99,8 +99,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
-                "projectPath": "D:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj"
+              "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
+                "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj"
               }
             }
           }
@@ -118,22 +118,13 @@
               "target": "Package",
               "version": "[2.1.20.1, )"
             },
-            "Microsoft.AspNetCore.HttpsPolicy": {
+            "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
+              "version": "[0.7.0, )"
             },
             "Microsoft.AspNetCore.NodeServices": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.SpaServices": {
               "target": "Package",
@@ -174,12 +165,6 @@
             "Microsoft.NetCore.App": {
               "target": "Package",
               "version": "[2.2.8, )"
-            },
-            "Microsoft.TypeScript.MSBuild": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.7.4, )"
             }
           },
           "imports": [

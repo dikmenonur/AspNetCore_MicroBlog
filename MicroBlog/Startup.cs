@@ -3,11 +3,10 @@ using MicroBlog.Mongo.Data;
 using MicroBlog.Mongo.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.Extensions.Hosting;
 
 namespace MicroBlog
 {
@@ -56,23 +55,31 @@ namespace MicroBlog
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
+
+
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseRouting();
-            app.UseEndpoints(end => end.MapRazorPages());
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
 
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "AngularApp";
-
-                spa.UseAngularCliServer(npmScript: "start");
+                if (env.IsDevelopment())
+                {
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
             });
         }
     }
