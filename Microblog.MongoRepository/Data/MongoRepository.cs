@@ -1,11 +1,10 @@
-﻿using System;
-using System.Linq;
-using MongoDB.Driver;
-using MicroBlog.Mongo.Model;
-using System.Threading.Tasks;
-using System.Linq.Expressions;
-using System.Collections.Generic;
+﻿using MicroBlog.Mongo.Model;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MicroBlog.Mongo.Data
 {

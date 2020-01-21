@@ -1,12 +1,12 @@
-﻿using MicroBlog.Web.Common;
-using MicroBlog.Mongo.Data;
+﻿using MicroBlog.Mongo.Data;
 using MicroBlog.Mongo.Model;
+using MicroBlog.Web.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.Extensions.Hosting;
 
 namespace MicroBlog
 {

@@ -1,7 +1,6 @@
-﻿using MongoDB.Driver;
-using MicroBlog.Mongo.Model;
+﻿using MicroBlog.Mongo.Model;
 using Microsoft.Extensions.Options;
-using MongoDB.Driver.Linq;
+using MongoDB.Driver;
 
 namespace MicroBlog.Mongo.Data
 {

@@ -1,8 +1,8 @@
 ﻿using MicroBlog.Mongo.Data;
 using MicroBlog.Mongo.Model;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Blog.Controllers
 {
@@ -119,6 +119,6 @@ namespace Blog.Controllers
         {
             return Ok("Hello");
         }
-        
+
     }
 }
