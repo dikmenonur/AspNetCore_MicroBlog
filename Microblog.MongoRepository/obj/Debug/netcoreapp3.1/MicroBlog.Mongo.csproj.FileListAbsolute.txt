@@ -12,3 +12,4 @@ C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\Microblog.MongoRepository\obj
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.AssemblyInfo.cs
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.dll
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.pdb
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.csprojAssemblyReference.cache
