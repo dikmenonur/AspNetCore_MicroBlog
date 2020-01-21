@@ -35,6 +35,9 @@
     <ProjectReference Include="..\Microblog.MongoRepository\MicroBlog.Mongo.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AngularApp\dist\css\" />
+    <Folder Include="AngularApp\dist\img\" />
+    <Folder Include="AngularApp\dist\js\" />
     <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 </Project>

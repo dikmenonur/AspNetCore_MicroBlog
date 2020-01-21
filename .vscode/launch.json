@@ -1,15 +1,18 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Launch via npm",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["run-script", "debug"],
-            "port": 9229
-          },
+       {
+    "type": "node",
+    "request": "launch",
+    "name": "Launch ng build",
+    "runtimeExecutable": "node",
+    "runtimeArgs": [
+        "--inspect-brk=5002",
+        "node_modules/@angular/cli/bin/ng"
+    ],
+    "args": ["build"],
+    "port": 5002
+},
           {
             "type": "node",
             "request": "launch",

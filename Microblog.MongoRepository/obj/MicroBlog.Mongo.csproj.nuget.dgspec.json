@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {}
+    "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {}
   },
   "projects": {
-    "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
+    "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "projectUniqueName": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
         "projectName": "MicroBlog.Mongo",
-        "projectPath": "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "projectPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
         "packagesPath": "C:\\Users\\odikmen\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
+        "outputPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

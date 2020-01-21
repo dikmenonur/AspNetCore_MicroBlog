@@ -1,49 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "../node_modules/raw-loader/index.js!./AngularApp/src/app/app.component.html":
-/*!**************************************************************************!*\
-  !*** ../node_modules/raw-loader!./AngularApp/src/app/app.component.html ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\">\r\n\r\n  <a [routerLink]=\"['/']\" class=\"btn btn-info\">Start</a>\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html":
-/*!************************************************************************************************************!*\
-  !*** ../node_modules/raw-loader!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html ***!
-  \************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>{{actionType}} blog post</h1>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"save()\" #formDir=\"ngForm\" novalidate>\r\n  <div class=\"form-group row\">\r\n    <label class=\" control-label col-md-12\">Title</label>\r\n    <div class=\"col-md-12\">\r\n      <input class=\"form-control\" type=\"text\" formControlName=\"title\">\r\n    </div>\r\n    <span class=\"text-danger ml-3\" *ngIf=\"title.invalid && formDir.submitted\">\r\n      Title is required.\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group row\">\r\n    <label class=\"control-label col-md-12\" for=\"Body\">Body text</label>\r\n    <div class=\"col-md-12\">\r\n      <textarea class=\"form-control\" rows=\"15\" formControlName=\"body\"></textarea>\r\n    </div>\r\n    <span class=\"text-danger ml-3\" *ngIf=\"body.invalid && formDir.submitted\">\r\n      Body is required.\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <button type=\"submit\" class=\"btn btn-success float-right\">Save</button>\r\n    <button class=\"btn btn-secondary float-left\" (click)=\"cancel()\">Cancel</button>\r\n  </div>\r\n</form>\r\n"
-
-/***/ }),
-
-/***/ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post/blog-post.component.html":
-/*!******************************************************************************************!*\
-  !*** ../node_modules/raw-loader!./AngularApp/src/app/blog-post/blog-post.component.html ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<ng-container *ngIf=\"(blogPost$ | async) as blogPost; else loading\">\r\n\r\n  <h1>{{ blogPost.title }}</h1>\r\n  <div>{{ blogPost.body }}</div>\r\n  <ul>\r\n    <li>{{ blogPost.creator }}</li>\r\n    <li>{{ blogPost.dt | date: \"dd.MM.y\" }}</li>\r\n  </ul>\r\n\r\n</ng-container>\r\n<ng-template #loading>Loading…</ng-template>\r\n"
-
-/***/ }),
-
-/***/ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-posts/blog-posts.component.html":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/raw-loader!./AngularApp/src/app/blog-posts/blog-posts.component.html ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Blog posts</h1>\r\n\r\n<p *ngIf=\"!(blogPosts$ | async)\"><em>Loading...</em></p>\r\n<p>\r\n  <a [routerLink]=\"['/add']\" class=\"btn btn-primary float-right mb-3\">New post</a>\r\n</p>\r\n\r\n<table class=\"table table-sm table-hover\" *ngIf=\"(blogPosts$ | async)?.length>0\">\r\n  <thead>\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Title</th>\r\n      <th>Creator</th>\r\n      <th>Date</th>\r\n      <th></th>\r\n      <th></th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let blogPost of (blogPosts$ | async)\">\r\n      <td>{{ blogPost.postId }}</td>\r\n      <td><a [routerLink]=\"['/blogpost/', blogPost.postId]\">{{ blogPost.title }}</a></td>\r\n      <td>{{ blogPost.creator }}</td>\r\n      <td>{{ blogPost.dt | date: \"dd.MM.y\" }}</td>\r\n      <td><a [routerLink]=\"['/blogpost/edit/', blogPost.postId]\" class=\"btn btn-primary btn-sm float-right\">Edit</a>\r\n      </td>\r\n      <td><a [routerLink]=\"\" (click)=\"delete(blogPost.postId)\" class=\"btn btn-danger btn-sm float-right\">Delete</a></td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
-
-/***/ }),
-
 /***/ "./AngularApp/$$_lazy_route_resource lazy recursive":
 /*!*****************************************************************!*\
   !*** ./AngularApp/$$_lazy_route_resource lazy namespace object ***!
@@ -77,9 +33,9 @@ webpackEmptyAsyncContext.id = "./AngularApp/$$_lazy_route_resource lazy recursiv
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _blog_posts_blog_posts_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blog-posts/blog-posts.component */ "./AngularApp/src/app/blog-posts/blog-posts.component.ts");
 /* harmony import */ var _blog_post_blog_post_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blog-post/blog-post.component */ "./AngularApp/src/app/blog-post/blog-post.component.ts");
 /* harmony import */ var _blog_post_add_edit_blog_post_add_edit_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blog-post-add-edit/blog-post-add-edit.component */ "./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.ts");
@@ -133,8 +89,8 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
 var AppComponent = /** @class */ (function () {
@@ -144,7 +100,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! raw-loader!./app.component.html */ "../node_modules/raw-loader/index.js!./AngularApp/src/app/app.component.html"),
+            template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./AngularApp/src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./AngularApp/src/app/app.component.scss")]
         })
     ], AppComponent);
@@ -165,11 +121,11 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "../node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./AngularApp/src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./AngularApp/src/app/app.component.ts");
 /* harmony import */ var _blog_posts_blog_posts_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blog-posts/blog-posts.component */ "./AngularApp/src/app/blog-posts/blog-posts.component.ts");
@@ -238,10 +194,10 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostAddEditComponent", function() { return BlogPostAddEditComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_blog_post_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/blog-post.service */ "./AngularApp/src/app/services/blog-post.service.ts");
 
 
@@ -330,7 +286,7 @@ var BlogPostAddEditComponent = /** @class */ (function () {
     BlogPostAddEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-blog-post-add-edit',
-            template: __webpack_require__(/*! raw-loader!./blog-post-add-edit.component.html */ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html"),
+            template: __webpack_require__(/*! raw-loader!./blog-post-add-edit.component.html */ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html"),
             styles: [__webpack_require__(/*! ./blog-post-add-edit.component.scss */ "./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.scss")]
         })
     ], BlogPostAddEditComponent);
@@ -362,9 +318,9 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostComponent", function() { return BlogPostComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_blog_post_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/blog-post.service */ "./AngularApp/src/app/services/blog-post.service.ts");
 
 
@@ -392,7 +348,7 @@ var BlogPostComponent = /** @class */ (function () {
     BlogPostComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-blog-post',
-            template: __webpack_require__(/*! raw-loader!./blog-post.component.html */ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post/blog-post.component.html"),
+            template: __webpack_require__(/*! raw-loader!./blog-post.component.html */ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post/blog-post.component.html"),
             styles: [__webpack_require__(/*! ./blog-post.component.scss */ "./AngularApp/src/app/blog-post/blog-post.component.scss")]
         })
     ], BlogPostComponent);
@@ -424,8 +380,8 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostsComponent", function() { return BlogPostsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_blog_post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/blog-post.service */ "./AngularApp/src/app/services/blog-post.service.ts");
 
 
@@ -455,7 +411,7 @@ var BlogPostsComponent = /** @class */ (function () {
     BlogPostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-blog-posts',
-            template: __webpack_require__(/*! raw-loader!./blog-posts.component.html */ "../node_modules/raw-loader/index.js!./AngularApp/src/app/blog-posts/blog-posts.component.html"),
+            template: __webpack_require__(/*! raw-loader!./blog-posts.component.html */ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-posts/blog-posts.component.html"),
             styles: [__webpack_require__(/*! ./blog-posts.component.scss */ "./AngularApp/src/app/blog-posts/blog-posts.component.scss")]
         })
     ], BlogPostsComponent);
@@ -476,11 +432,11 @@ var BlogPostsComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostService", function() { return BlogPostService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/environments/environment */ "./AngularApp/src/environments/environment.ts");
 
 
@@ -585,8 +541,8 @@ var environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "../node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./AngularApp/src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./AngularApp/src/environments/environment.ts");
 
@@ -602,6 +558,50 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./AngularApp/src/app/app.component.html":
+/*!*************************************************************************!*\
+  !*** ./node_modules/raw-loader!./AngularApp/src/app/app.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\r\n\r\n  <a [routerLink]=\"['/']\" class=\"btn btn-info\">Start</a>\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./AngularApp/src/app/blog-post-add-edit/blog-post-add-edit.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>{{actionType}} blog post</h1>\r\n<form [formGroup]=\"form\" (ngSubmit)=\"save()\" #formDir=\"ngForm\" novalidate>\r\n  <div class=\"form-group row\">\r\n    <label class=\" control-label col-md-12\">Title</label>\r\n    <div class=\"col-md-12\">\r\n      <input class=\"form-control\" type=\"text\" formControlName=\"title\">\r\n    </div>\r\n    <span class=\"text-danger ml-3\" *ngIf=\"title.invalid && formDir.submitted\">\r\n      Title is required.\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group row\">\r\n    <label class=\"control-label col-md-12\" for=\"Body\">Body text</label>\r\n    <div class=\"col-md-12\">\r\n      <textarea class=\"form-control\" rows=\"15\" formControlName=\"body\"></textarea>\r\n    </div>\r\n    <span class=\"text-danger ml-3\" *ngIf=\"body.invalid && formDir.submitted\">\r\n      Body is required.\r\n    </span>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <button type=\"submit\" class=\"btn btn-success float-right\">Save</button>\r\n    <button class=\"btn btn-secondary float-left\" (click)=\"cancel()\">Cancel</button>\r\n  </div>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-post/blog-post.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./AngularApp/src/app/blog-post/blog-post.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"(blogPost$ | async) as blogPost; else loading\">\r\n\r\n  <h1>{{ blogPost.title }}</h1>\r\n  <div>{{ blogPost.body }}</div>\r\n  <ul>\r\n    <li>{{ blogPost.creator }}</li>\r\n    <li>{{ blogPost.dt | date: \"dd.MM.y\" }}</li>\r\n  </ul>\r\n\r\n</ng-container>\r\n<ng-template #loading>Loading…</ng-template>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./AngularApp/src/app/blog-posts/blog-posts.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./AngularApp/src/app/blog-posts/blog-posts.component.html ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Blog posts</h1>\r\n\r\n<p *ngIf=\"!(blogPosts$ | async)\"><em>Loading...</em></p>\r\n<p>\r\n  <a [routerLink]=\"['/add']\" class=\"btn btn-primary float-right mb-3\">New post</a>\r\n</p>\r\n\r\n<table class=\"table table-sm table-hover\" *ngIf=\"(blogPosts$ | async)?.length>0\">\r\n  <thead>\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Title</th>\r\n      <th>Creator</th>\r\n      <th>Date</th>\r\n      <th></th>\r\n      <th></th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let blogPost of (blogPosts$ | async)\">\r\n      <td>{{ blogPost.postId }}</td>\r\n      <td><a [routerLink]=\"['/blogpost/', blogPost.postId]\">{{ blogPost.title }}</a></td>\r\n      <td>{{ blogPost.creator }}</td>\r\n      <td>{{ blogPost.dt | date: \"dd.MM.y\" }}</td>\r\n      <td><a [routerLink]=\"['/blogpost/edit/', blogPost.postId]\" class=\"btn btn-primary btn-sm float-right\">Edit</a>\r\n      </td>\r\n      <td><a [routerLink]=\"\" (click)=\"delete(blogPost.postId)\" class=\"btn btn-danger btn-sm float-right\">Delete</a></td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
 /***/ 0:
 /*!**************************************!*\
   !*** multi ./AngularApp/src/main.ts ***!
@@ -609,7 +609,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Git\AspNetCore_MicroBlog\MicroBlog\AngularApp\src\main.ts */"./AngularApp/src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\AngularApp\src\main.ts */"./AngularApp/src/main.ts");
 
 
 /***/ })
