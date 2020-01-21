@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace MicroBlog
 {
@@ -16,6 +13,7 @@ namespace MicroBlog
         {
             string wwwrootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
             CreateWebHostBuilder(args, wwwrootPath).Build().Run();
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args, string staticContentPath) =>
@@ -25,11 +23,12 @@ namespace MicroBlog
                {
                    builder.SetBasePath(Directory.GetCurrentDirectory());
                })
-               .UseWebRoot(staticContentPath)
-               .ConfigureKestrel(options =>
-               {
-                   options.AddServerHeader = false;
-               })
-               .UseStartup<Startup>();
+               .UseWebRoot(staticContentPath).
+                UseKestrel(serverOptions =>
+                {
+                    // Set properties and call methods on options
+                })
+                .UseIISIntegration()
+                .UseStartup<Startup>();
     }
 }

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Linq;
-using MicroBlog.Mongo.Data;
+﻿using MicroBlog.Mongo.Data;
+using MicroBlog.Mongo.Model;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using MicroBlog.Mongo.Model;
 
 namespace Blog.Controllers
 {
@@ -97,25 +95,23 @@ namespace Blog.Controllers
         }
 
         // DELETE: api/BlogPosts/5
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteBlogPost([FromRoute] int id)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBlogPost([FromRoute] string title)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-        //    var blogPost = await _context.BlogPosts.FindAsync(id);
-        //    if (blogPost == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var blogPost = await this.MongoRepository.GetDatasAsync(title);
 
-        //    _repo.Delete(blogPost);
-        //    var save = await _repo.SaveAsync(blogPost);
+            if (blogPost == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(blogPost);
-        //}
+            return Ok(blogPost);
+        }
 
         [HttpGet]
         [Route("test")]
@@ -123,9 +119,6 @@ namespace Blog.Controllers
         {
             return Ok("Hello");
         }
-        //private bool BlogPostExists(int id)
-        //{
-        //    return _context.BlogPosts.Any(e => e.PostId == id);
-        //}
+        
     }
 }

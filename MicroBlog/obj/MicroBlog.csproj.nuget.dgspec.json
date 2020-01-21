@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -41,17 +41,11 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.1": {
           "dependencies": {
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
             },
             "MongoDB.Bson": {
               "target": "Package",
@@ -72,6 +66,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -123,22 +122,13 @@
               "target": "Package",
               "version": "[2.1.20.1, )"
             },
-            "Microsoft.AspNetCore": {
+            "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[0.7.0, )"
             },
-            "Microsoft.AspNetCore.HttpsPolicy": {
+            "Microsoft.AspNetCore.NodeServices": {
               "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.1.1, )"
             },
             "Microsoft.AspNetCore.SpaServices": {
               "target": "Package",
@@ -148,11 +138,37 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
-            "Microsoft.TypeScript.MSBuild": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[3.7.4, )"
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Configuration": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.NetCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
             }
           },
           "imports": [

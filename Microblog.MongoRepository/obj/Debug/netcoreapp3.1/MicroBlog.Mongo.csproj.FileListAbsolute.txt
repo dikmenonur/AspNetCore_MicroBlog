@@ -1,0 +1,7 @@
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp3.1\MicroBlog.Mongo.deps.json
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp3.1\MicroBlog.Mongo.dll
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\bin\Debug\netcoreapp3.1\MicroBlog.Mongo.pdb
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.AssemblyInfoInputs.cache
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.AssemblyInfo.cs
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.dll
+D:\Git\AspNetCore_MicroBlog\Microblog.MongoRepository\obj\Debug\netcoreapp3.1\MicroBlog.Mongo.pdb

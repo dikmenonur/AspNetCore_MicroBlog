@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\skeletons",
-    "\\skeletons\\blog"
+    "\\Microblog.MongoRepository"
   ],
+  "SelectedNode": "\\MicroBlog.sln",
   "PreviewInSolutionExplorer": false
 }
