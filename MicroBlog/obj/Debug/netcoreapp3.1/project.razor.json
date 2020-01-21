@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
+  "FilePath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
   "Configuration": {
     "ConfigurationName": "Default",
     "LanguageVersion": "3.0",
@@ -17086,7 +17086,7 @@
   "RootNamespace": "MicroBlog",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\Views\\Layouts\\Main.cshtml",
+      "FilePath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\Views\\Layouts\\Main.cshtml",
       "TargetPath": "Views\\Layouts\\Main.cshtml",
       "FileKind": "mvc"
     }

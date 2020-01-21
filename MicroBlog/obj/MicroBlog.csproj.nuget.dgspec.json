@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {}
+    "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
+    "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "projectUniqueName": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
         "projectName": "MicroBlog.Mongo",
-        "projectPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
-        "packagesPath": "C:\\Users\\odikmen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
+        "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj",
+        "packagesPath": "C:\\Users\\Onur Dikmen\\.nuget\\packages\\",
+        "outputPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\odikmen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Onur Dikmen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -71,27 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {
+    "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
+        "projectUniqueName": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
         "projectName": "MicroBlog",
-        "projectPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
-        "packagesPath": "C:\\Users\\odikmen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\MicroBlog\\obj\\",
+        "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\MicroBlog.csproj",
+        "packagesPath": "C:\\Users\\Onur Dikmen\\.nuget\\packages\\",
+        "outputPath": "d:\\Git\\AspNetCore_MicroBlog\\MicroBlog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\odikmen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Onur Dikmen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -103,8 +99,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
-                "projectPath": "C:\\Users\\odikmen\\source\\repos\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj"
+              "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj": {
+                "projectPath": "d:\\Git\\AspNetCore_MicroBlog\\Microblog.MongoRepository\\MicroBlog.Mongo.csproj"
               }
             }
           }
@@ -189,7 +185,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
