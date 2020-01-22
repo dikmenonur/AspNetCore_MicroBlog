@@ -2,6 +2,7 @@
 using MicroBlog.Mongo.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace Blog.Controllers
@@ -90,8 +91,8 @@ namespace Blog.Controllers
             }
 
             await this.MongoRepository.AddDataSingleAsync(blogPost);
-
-            return CreatedAtAction("GetBlogPost", new { blogPost }, blogPost);
+           
+            return CreatedAtAction("GetBlogPosts", new { blogPost }, blogPost);
         }
 
         // DELETE: api/BlogPosts/5
