@@ -1280,6 +1280,23 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+      "mongocsharpdriver/2.10.1": {
+        "dependencies": {
+          "MongoDB.Bson": "2.10.1",
+          "MongoDB.Driver": "2.10.1",
+          "MongoDB.Driver.Core": "2.10.1",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.Legacy.dll": {
+            "assemblyVersion": "2.10.1.0",
+            "fileVersion": "2.10.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Driver.Legacy.dll": {}
+        }
+      },
       "MongoDB.Bson/2.10.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
@@ -2488,7 +2505,8 @@
         "dependencies": {
           "Microsoft.Extensions.Options": "3.1.1",
           "MongoDB.Bson": "2.10.1",
-          "MongoDB.Driver": "2.10.1"
+          "MongoDB.Driver": "2.10.1",
+          "mongocsharpdriver": "2.10.1"
         },
         "runtime": {
           "MicroBlog.Mongo.dll": {}
@@ -4764,6 +4782,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "mongocsharpdriver/2.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vsWDSspal1yYD1qRLCzDsdLxfni5TfKCDH5ezp4DShhhNKkXVdKWGGwtbTxfVizWIOzIKfPJ5cRZCziLN/0ErQ==",
+      "path": "mongocsharpdriver/2.10.1",
+      "hashPath": "mongocsharpdriver.2.10.1.nupkg.sha512"
     },
     "MongoDB.Bson/2.10.1": {
       "type": "package",

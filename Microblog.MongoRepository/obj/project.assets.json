@@ -100,6 +100,21 @@
           }
         }
       },
+      "mongocsharpdriver/2.10.1": {
+        "type": "package",
+        "dependencies": {
+          "MongoDB.Bson": "2.10.1",
+          "MongoDB.Driver": "2.10.1",
+          "MongoDB.Driver.Core": "2.10.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Driver.Legacy.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.Legacy.dll": {}
+        }
+      },
       "MongoDB.Bson/2.10.1": {
         "type": "package",
         "dependencies": {
@@ -1981,6 +1996,22 @@
         "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netcore50/_._",
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
+      ]
+    },
+    "mongocsharpdriver/2.10.1": {
+      "sha512": "vsWDSspal1yYD1qRLCzDsdLxfni5TfKCDH5ezp4DShhhNKkXVdKWGGwtbTxfVizWIOzIKfPJ5cRZCziLN/0ErQ==",
+      "type": "package",
+      "path": "mongocsharpdriver/2.10.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net452/MongoDB.Driver.Legacy.dll",
+        "lib/net452/MongoDB.Driver.Legacy.xml",
+        "lib/netstandard1.5/MongoDB.Driver.Legacy.dll",
+        "lib/netstandard1.5/MongoDB.Driver.Legacy.xml",
+        "mongocsharpdriver.2.10.1.nupkg.sha512",
+        "mongocsharpdriver.nuspec"
       ]
     },
     "MongoDB.Bson/2.10.1": {
@@ -6211,7 +6242,8 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.Options >= 3.1.1",
       "MongoDB.Bson >= 2.10.1",
-      "MongoDB.Driver >= 2.10.1"
+      "MongoDB.Driver >= 2.10.1",
+      "mongocsharpdriver >= 2.10.1"
     ]
   },
   "packageFolders": {
@@ -6267,6 +6299,10 @@
             "version": "[2.10.1, )"
           },
           "MongoDB.Driver": {
+            "target": "Package",
+            "version": "[2.10.1, )"
+          },
+          "mongocsharpdriver": {
             "target": "Package",
             "version": "[2.10.1, )"
           }

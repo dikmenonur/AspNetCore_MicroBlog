@@ -1,9 +1,9 @@
-﻿using MicroBlog.Mongo.Data;
+﻿using System;
+using MicroBlog.Mongo.Data;
 using MicroBlog.Mongo.Model;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
-using System.Threading.Tasks;
 
 namespace Blog.Controllers
 {
@@ -21,21 +21,22 @@ namespace Blog.Controllers
 
         // GET: api/BlogPosts
         [HttpGet]
-        public Task<IEnumerable<DataModel>> GetBlogPosts()
+        public async Task<IEnumerable<DataModel>> GetBlogPosts()
         {
-            return this.MongoRepository.GetDatasAsync();
+            var dataModel = await this.MongoRepository.GetDatasAsync();
+            return dataModel;
         }
 
         // GET: api/BlogPosts/5
-        [HttpGet("{title}")]
-        public async Task<IActionResult> GetBlogPost([FromRoute] string title)
+        [HttpGet("{postId}")]
+        public async Task<IActionResult> GetBlogPost([FromRoute] int postId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var blogPost = await this.MongoRepository.GetDatasAsync(title);
+            var blogPost = await this.MongoRepository.GetDataAsync(postId);
 
             if (blogPost == null)
             {
@@ -46,40 +47,31 @@ namespace Blog.Controllers
         }
 
         // PUT: api/BlogPosts/5
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutBlogPost([FromRoute] int id, [FromBody] DataModel blogPost)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutBlogPost([FromRoute] int postId, [FromBody] DataModel blogPost)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-        //    if (id != blogPost.Id)
-        //    {
-        //        return BadRequest();
-        //    }
+            if (postId != blogPost.PostId)
+            {
+                return BadRequest();
+            }
 
-        //    _context.Entry(blogPost).State = EntityState.Modified;
+            try
+            {
+                await this.MongoRepository.UpdateDataAsync(postId, blogPost);
 
-        //    try
-        //    {
-        //        _repo.Update(blogPost);
-        //        var save = await _repo.SaveAsync(blogPost);
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!BlogPostExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
-        //    return NoContent();
-        //}
+            return Ok();
+        }
 
         // POST: api/BlogPosts
         [HttpPost]
@@ -91,27 +83,20 @@ namespace Blog.Controllers
             }
 
             await this.MongoRepository.AddDataSingleAsync(blogPost);
-           
+
             return CreatedAtAction("GetBlogPosts", new { blogPost }, blogPost);
         }
 
         // DELETE: api/BlogPosts/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBlogPost([FromRoute] string title)
+        [HttpDelete("{postId}")]
+        public async Task<IActionResult> DeleteBlogPost([FromRoute] int postId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            var blogPost = await this.MongoRepository.GetDatasAsync(title);
-
-            if (blogPost == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(blogPost);
+            await this.MongoRepository.DeleteDataAsync(postId);
+            return Ok();
         }
 
         [HttpGet]

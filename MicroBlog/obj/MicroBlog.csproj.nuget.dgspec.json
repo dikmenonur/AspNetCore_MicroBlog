@@ -54,6 +54,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.10.1, )"
+            },
+            "mongocsharpdriver": {
+              "target": "Package",
+              "version": "[2.10.1, )"
             }
           },
           "imports": [

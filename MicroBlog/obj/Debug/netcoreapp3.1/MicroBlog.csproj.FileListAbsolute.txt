@@ -159,3 +159,4 @@ C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\bin\Debug\netcoreap
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\bin\Debug\netcoreapp3.1\MicroBlog.Mongo.pdb
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.Views.pdb
 C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\obj\Debug\netcoreapp3.1\MicroBlog.csproj.CopyComplete
+C:\Users\odikmen\source\repos\AspNetCore_MicroBlog\MicroBlog\bin\Debug\netcoreapp3.1\MongoDB.Driver.Legacy.dll

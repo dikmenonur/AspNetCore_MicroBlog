@@ -3,15 +3,22 @@ using System.Collections.Generic;
 
 namespace MicroBlog.Mongo.Model
 {
+    [BsonIgnoreExtraElements]
     public class DataModel : MongoModel
     {
-        [BsonElement("Title")]
+        [BsonElement("postId")]
+        public int PostId { get; set; }
+
+        [BsonElement("tite")]
         public string Title { get; set; }
 
-        [BsonElement("Detail")]
+        [BsonElement("detail")]
         public string Detail { get; set; }
 
-        [BsonElement("Tag")]
+        [BsonElement("tag")]
         public List<string> Tag { get; set; }
+
+        [BsonElement("creator")]
+        public string Creator { get => "Onur Dikmen"; }
     }
 }

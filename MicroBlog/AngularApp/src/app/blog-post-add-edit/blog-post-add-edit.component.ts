@@ -36,6 +36,22 @@ export class BlogPostAddEditComponent implements OnInit {
     )
   }
 
+  ngGetId() {
+    try {
+      var myDate = new Date();
+      var varID = myDate.getHours() + myDate.getMinutes() + myDate.getSeconds() + myDate.getMilliseconds();
+
+      return varID;
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  ngRandomId() {
+    var s = this.ngGetId();
+    return s;
+  }
+
   ngOnInit() {
 
     if (this.postId > 0) {
@@ -44,7 +60,7 @@ export class BlogPostAddEditComponent implements OnInit {
         .subscribe(data => (
           this.existingBlogPost = data,
           this.form.controls[this.formTitle].setValue(data.title),
-          this.form.controls[this.formBody].setValue(data.body)
+          this.form.controls[this.formBody].setValue(data.detail)
         ));
     }
   }
@@ -56,10 +72,11 @@ export class BlogPostAddEditComponent implements OnInit {
 
     if (this.actionType === 'Add') {
       let blogPost: BlogPost = {
+        postId: this.ngRandomId(),
         dt: new Date(),
-        creator: 'Martin',
+        creator: 'Onur Dikmen',
         title: this.form.get(this.formTitle).value,
-        body: this.form.get(this.formBody).value
+        detail: this.form.get(this.formBody).value
       };
 
       this.blogPostService.saveBlogPost(blogPost)
@@ -74,7 +91,7 @@ export class BlogPostAddEditComponent implements OnInit {
         dt: this.existingBlogPost.dt,
         creator: this.existingBlogPost.creator,
         title: this.form.get(this.formTitle).value,
-        body: this.form.get(this.formBody).value
+        detail: this.form.get(this.formBody).value
       };
       this.blogPostService.updateBlogPost(blogPost.postId, blogPost)
         .subscribe((data) => {
