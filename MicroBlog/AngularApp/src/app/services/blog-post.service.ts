@@ -18,7 +18,7 @@ export class BlogPostService {
     })
   };
   constructor(private http: HttpClient) {
-    this.myAppUrl = environment.appUrl;
+    this.myAppUrl = "https://localhost:5200/";
     this.myApiUrl = 'api/BlogPosts/';
   }
 

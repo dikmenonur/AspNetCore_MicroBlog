@@ -23,7 +23,7 @@
               "AngularApp/src/assets"
             ],
             "styles": [
-              "AngularApp/src/styles.scss"
+              "AngularApp/src/styles.scss",
             ],
             "scripts": []
           },
@@ -72,7 +72,7 @@
             "tsConfig": "AngularApp/tsconfig.spec.json",
             "karmaConfig": "AngularApp/karma.conf.js",
             "styles": [
-              "AngularApp/src/styles.css"
+              "AngularApp/src/styles.scss"
             ],
             "scripts": [],
             "assets": [

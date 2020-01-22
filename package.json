@@ -7,8 +7,10 @@
     "test": "test"
   },
   "dependencies": {
+    "connect": "^3.7.0",
     "rxjs": "^6.5.4",
-    "rxjs-compat": "^6.5.4"
+    "rxjs-compat": "^6.5.4",
+    "serve-static": "^1.14.1"
   },
   "devDependencies": {},
   "scripts": {
