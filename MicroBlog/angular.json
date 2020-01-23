@@ -19,15 +19,13 @@
             "polyfills": "AngularApp/src/polyfills.ts",
             "tsConfig": "AngularApp/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "AngularApp/src/favicon.ico",
+              "AngularApp/src/assets"
             ],
             "styles": [
-              "css/bootstrap.min.css",
-              "css/font-awesome.min.css",
-              "css/jquery-ddr.css",
-              "css/site.css",
-              "src/styles.scss"
+              "AngularApp/css/bootstrap.min.css",
+              "AngularApp/css/site.css",
+              "AngularApp/src/styles.scss"
             ],
             "scripts": []
           },
