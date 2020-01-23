@@ -14,6 +14,9 @@ namespace MicroBlog.Mongo.Model
 
         [BsonElement("detail")]
         public string Detail { get; set; }
+        
+        [BsonElement("email")]
+        public string Email { get; set; }
 
         [BsonElement("tag")]
         public List<string> Tag { get; set; }

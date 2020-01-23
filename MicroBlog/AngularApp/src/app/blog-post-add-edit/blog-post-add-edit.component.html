@@ -1,24 +1,32 @@
 <h1>{{actionType}} blog post</h1>
 <div class="col-md-6 order-md-last d-flex">
-  <form action="#" class="bg-light p-5 contact-form"  [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+  <form action="#" class="bg-light p-5 contact-form" [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Title"   formControlName="title" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;">
+      <input type="text" class="form-control" placeholder="Title" formControlName="title" style="cursor: auto;">
     </div>
     <span class="text-danger ml-3" *ngIf="title?.invalid && formDir.submitted">
       Title is required.
     </span>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Your Email">
+      <input type="text" class="form-control" placeholder="Your Email" formControlName="email">
+      <span class="text-danger ml-3" *ngIf="email?.invalid && formDir.submitted">
+        Email is required.
+      </span>
+    </div>
+   
+    <div class="form-group">
+      <textarea name="" id="" cols="30" rows="7" class="form-control" formControlName="body" placeholder="Message"></textarea>
+      <span class="text-danger ml-3" *ngIf="body?.invalid && formDir.submitted">
+        Message is required.
+      </span>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Subject">
-    </div>
-    <div class="form-group">
-    <textarea name="" id="" cols="30" rows="7" class="form-control" formControlName="body" placeholder="Message"></textarea>
+      <tag-input formControlName="tag"></tag-input>
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-success float-right">Save</button>
-      <button class="btn btn-secondary float-left" (click)="cancel()">Cancel</button>
+      <button class="btn btn-danger float-right " (click)="cancel()">Cancel</button>
+
     </div>
   </form>
 </div>
