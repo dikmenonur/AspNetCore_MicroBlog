@@ -22,7 +22,8 @@ namespace MicroBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages().AddMvcOptions(options => options.EnableEndpointRouting = false); ;
+            services.AddRazorPages().AddMvcOptions(options => options.EnableEndpointRouting = false);
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
@@ -80,7 +81,8 @@ namespace MicroBlog
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:5200");
+                    //spa.UseAngularCliServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                     spa.Options.StartupTimeout = TimeSpan.FromSeconds(200); // <-- add this line
                 }
             });

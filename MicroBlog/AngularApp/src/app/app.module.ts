@@ -8,7 +8,9 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostAddEditComponent } from './blog-post-add-edit/blog-post-add-edit.component';
 import { BlogPostService } from './services/blog-post.service';
-
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,10 @@ import { BlogPostService } from './services/blog-post.service';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [
     BlogPostService

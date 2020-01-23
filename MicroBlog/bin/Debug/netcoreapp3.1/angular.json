@@ -23,7 +23,11 @@
               "AngularApp/src/assets"
             ],
             "styles": [
-              "AngularApp/src/styles.scss",
+              "dist/css/bootstrap.min.css",
+              "dist/css/font-awesome.min.css",
+              "dist/css/jquery-ddr.css",
+              "dist/css/site.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
