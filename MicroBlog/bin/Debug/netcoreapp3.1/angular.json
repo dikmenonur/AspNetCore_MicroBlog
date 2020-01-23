@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "wwwroot/AngularApp/dist",
+            "outputPath": "wwwroot/AngularApp",
             "index": "AngularApp/src/index.html",
             "main": "AngularApp/src/main.ts",
             "polyfills": "AngularApp/src/polyfills.ts",
@@ -23,11 +23,9 @@
               "AngularApp/src/assets"
             ],
             "styles": [
-              "dist/css/bootstrap.min.css",
-              "dist/css/font-awesome.min.css",
-              "dist/css/jquery-ddr.css",
-              "dist/css/site.css",
-              "src/styles.scss"
+              "AngularApp/css/bootstrap.min.css",
+              "AngularApp/css/site.css",
+              "AngularApp/src/styles.scss"
             ],
             "scripts": []
           },

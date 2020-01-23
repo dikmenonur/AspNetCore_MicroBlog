@@ -1,10 +1,37 @@
 <ng-container *ngIf="(blogPost$ | async) as blogPost; else loading">
-  <h1>{{ blogPost.title }}</h1>
-  <div>{{ blogPost.detail }}</div>
-  <ul>
-    <li>{{ blogPost.creator }}</li>
-    <li>{{ blogPost.dt | date: "dd.MM.y" }}</li>
-  </ul>
+  <div class="container">
+    <div class="row">
+      <h1 class="my-4">
+        {{ blogPost.title }}
+      </h1>
+    </div>
+    <div class="row">
+      <h4 class="my-4">
+        <small>Create Post : {{ blogPost.creator }}</small>
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-fluid" src="https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png" alt="blog post ile ilgili görsel sonucu" />
+      </div>
+    </div>
+    <div class="row">
 
+      <div class="col-md-8">
+        <h3 class="my-3">Description</h3>
+        <p>
+          {{ blogPost.detail }}
+        </p>
+        <h3 class="my-3">Project Details</h3>
+        <ul>
+          <li>Angular CLR</li>
+          <li>MongoDb</li>
+          <li>this project by of Onur Dikmen</li>
+          <li>Core 3.1</li>
+          <li>Create Date : {{ blogPost.creatTime | date: "dd.MM.y" }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </ng-container>
 <ng-template #loading>Loading…</ng-template>

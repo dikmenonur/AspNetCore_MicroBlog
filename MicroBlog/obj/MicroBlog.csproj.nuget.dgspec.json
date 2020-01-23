@@ -122,10 +122,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Adriva.Web.Core": {
-              "target": "Package",
-              "version": "[2.1.20.1, )"
-            },
             "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
               "version": "[0.7.0, )"

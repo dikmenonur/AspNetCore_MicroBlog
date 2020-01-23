@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BlogPostService } from '../services/blog-post.service';
 import { BlogPost } from '../models/blogpost';
@@ -18,15 +18,22 @@ export class BlogPostAddEditComponent implements OnInit {
   formEmail: string;
   formTag: string;
   formBody: string;
+  tagValue: string;
   postId: number;
   errorMessage: any;
   existingBlogPost: BlogPost;
 
   constructor(private blogPostService: BlogPostService, private formBuilder: FormBuilder, private avRoute: ActivatedRoute, private router: Router) {
+
     const idParam = 'id';
     this.actionType = 'Add';
     this.formTitle = 'title';
     this.formBody = 'body';
+    this.formEmail = 'email';
+    this.formTag = 'tag';
+
+    //this.form.addControl("tag", new FormControl("tag", Validators.nullValidator))
+
     if (this.avRoute.snapshot.params[idParam]) {
       this.postId = this.avRoute.snapshot.params[idParam];
     }
@@ -37,6 +44,7 @@ export class BlogPostAddEditComponent implements OnInit {
         title: ['', [Validators.required]],
         body: ['', [Validators.required]],
         email: ['', [Validators.required]],
+        tag: ['', [Validators.nullValidator]]
       }
     )
   }
@@ -80,7 +88,7 @@ export class BlogPostAddEditComponent implements OnInit {
     if (this.actionType === 'Add') {
       let blogPost: BlogPost = {
         postId: this.ngRandomId(),
-        dt: new Date(),
+        creatTime: new Date(),
         creator: 'Onur Dikmen',
         title: this.form.get(this.formTitle).value,
         detail: this.form.get(this.formBody).value,
@@ -97,7 +105,7 @@ export class BlogPostAddEditComponent implements OnInit {
     if (this.actionType === 'Edit') {
       let blogPost: BlogPost = {
         postId: this.existingBlogPost.postId,
-        dt: this.existingBlogPost.dt,
+        creatTime: this.existingBlogPost.creatTime,
         creator: this.existingBlogPost.creator,
         title: this.form.get(this.formTitle).value,
         detail: this.form.get(this.formBody).value,

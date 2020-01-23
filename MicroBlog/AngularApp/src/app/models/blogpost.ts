@@ -5,5 +5,5 @@ export class BlogPost {
   email: string;
   tag: string;
   detail: string;
-  dt: Date;
+  creatTime: Date;
 }

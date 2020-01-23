@@ -37,13 +37,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\css\bootstrap.min.css" />
-    <Content Include="AngularApp\css\font-awesome.min.css" />
-    <Content Include="AngularApp\css\jquery-ddr.css" />
     <Content Include="AngularApp\css\material.woff2" />
     <Content Include="AngularApp\css\site.css" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Adriva.Web.Core" Version="2.1.20.1" />
     <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.1" />
