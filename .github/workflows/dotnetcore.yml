@@ -14,9 +14,11 @@ jobs:
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-    - name: npm install, build, and test
+    - name: npm install
       run: npm install --if-present
+    - name: npm build
       run: npm rebuild --if-present
+    - name: npm prepare
       run: npm run prepare --if-present
       
     - name: Setup .NET Core
