@@ -41,7 +41,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Build image
-      run: docker build hodorod/aspnetcoremicroblog  $VERSION
+      run : docker build -f aspnetcore_microblog/Dockerfile -t $VERSION
 
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
