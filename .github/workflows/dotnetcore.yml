@@ -41,7 +41,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Build image
-      run: docker build docker build -t git@github.com/bikeladam/aspnetnore_microblog -f  $IMAGE_NAME
+      run: docker build docker build git@github.com/bikeladam/aspnetnore_microblog 
 
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
