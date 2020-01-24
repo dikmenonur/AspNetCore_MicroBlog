@@ -1,0 +1,61 @@
+name: .NET Core
+
+on:
+  push: 
+    branches:
+      - master
+    tags:
+       - v*
+       
+# Run tests for any PRs.
+  pull_request:
+
+env:
+  # TODO: Change variable to your image's name.
+  IMAGE_NAME: aspnetcoremicroblog
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+ 
+    - name: npm install
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
+    - name: npm install
+      run: npm install --if-present
+    - name: npm build
+      run: npm rebuild --if-present
+    - name: npm prepare
+      run: npm run prepare --if-present
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version:  3.1.100
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+
+    - name: Build image
+      run : docker build aspnetcore_microblog/microblog  $VERSION
+
+    - name: Log into registry
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+
+    - name: Push image
+      run: |
+          IMAGE_ID=docker.pkg.github.com/aspnetcoremicroblog/$IMAGE_NAME
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          # Use Docker `latest` tag convention
+          [ "$VERSION" == "master" ] && VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag image $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION

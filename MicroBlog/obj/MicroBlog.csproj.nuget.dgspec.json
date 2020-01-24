@@ -52,6 +52,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.10.1, )"
+            },
+            "mongocsharpdriver": {
+              "target": "Package",
+              "version": "[2.10.1, )"
             }
           },
           "imports": [
@@ -114,10 +118,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Adriva.Web.Core": {
-              "target": "Package",
-              "version": "[2.1.20.1, )"
-            },
             "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
               "version": "[0.7.0, )"
@@ -125,6 +125,10 @@
             "Microsoft.AspNetCore.NodeServices": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Razor.Runtime": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.SpaServices": {
               "target": "Package",

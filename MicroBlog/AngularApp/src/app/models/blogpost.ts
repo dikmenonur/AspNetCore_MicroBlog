@@ -2,6 +2,8 @@ export class BlogPost {
   postId?: number;
   creator: string;
   title: string;
-  body: string;
-  dt: Date;
+  email: string;
+  tag: string;
+  detail: string;
+  creatTime: Date;
 }

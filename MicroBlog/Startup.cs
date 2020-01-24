@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace MicroBlog
 {
@@ -21,7 +22,8 @@ namespace MicroBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages().AddMvcOptions(options => options.EnableEndpointRouting = false); ;
+            services.AddRazorPages().AddMvcOptions(options => options.EnableEndpointRouting = false);
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
@@ -76,9 +78,12 @@ namespace MicroBlog
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "AngularApp";
+
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    //spa.UseAngularCliServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
+                    spa.Options.StartupTimeout = TimeSpan.FromSeconds(200); // <-- add this line
                 }
             });
         }
