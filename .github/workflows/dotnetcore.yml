@@ -41,14 +41,14 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Build image
-      run: docker build ${ENV_VAR_THAT_WASNT_SET}
+      run: docker build hodorod/aspnetcoremicroblog  $VERSION
 
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
     - name: Push image
       run: |
-          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/aspnetcoremicroblog/$IMAGE_NAME
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
