@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "wwwroot/AngularApp/dist",
+            "outputPath": "wwwroot/AngularApp",
             "index": "AngularApp/src/index.html",
             "main": "AngularApp/src/main.ts",
             "polyfills": "AngularApp/src/polyfills.ts",
@@ -22,6 +22,8 @@
               "AngularApp/src/assets"
             ],
             "styles": [
+              "AngularApp/css/bootstrap.min.css",
+              "AngularApp/css/site.css",
               "AngularApp/src/styles.scss"
             ],
             "scripts": []
@@ -71,7 +73,7 @@
             "tsConfig": "AngularApp/tsconfig.spec.json",
             "karmaConfig": "AngularApp/karma.conf.js",
             "styles": [
-              "AngularApp/src/styles.css"
+              "AngularApp/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
